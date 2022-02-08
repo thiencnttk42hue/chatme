@@ -3,7 +3,9 @@ const morgan = require('morgan');
 const route = require('./routes');
 const express = require('express');
 const { engine } = require('express-handlebars');
-
+var session = require('express-session');
+var bodyParser = require('body-parser');
+const db = require('./config/db');
 const app = express();
 const port = 3000;
 
@@ -12,6 +14,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 // HTTP logger
 app.use(morgan('combined'));
 
+//session
+app.use(session({
+    secret: 'chatme',
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: true }
+}))
 
 // middleware
 app.use(
@@ -20,7 +29,6 @@ app.use(
     }),
 );
 app.use(express.json());
-
 
 // template angine
 app.engine('hbs', engine({ extname: '.hbs' }));
@@ -31,5 +39,5 @@ app.set('views', path.join(__dirname, 'resources', 'views'));
 route(app);
 
 app.listen(port, () => {
-    console.log(`Example app listening on port http://localhost:${port}`)
+    console.log(`Example app listening on port http://localhost:${port}/login`)
 })
