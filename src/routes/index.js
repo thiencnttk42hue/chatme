@@ -1,9 +1,12 @@
 const siteRouter = require('./site');
+const authLoginRouter = require('./authLogin');
+const authRegisterRouter = require('./authRegister');
 
 function route(app) {
-    //begin routing
+    app.use('/login', authLoginRouter);
+
+    app.use('/register', authRegisterRouter);
 
     app.use('/', siteRouter);
-    // endrouting
 }
 module.exports = route;
