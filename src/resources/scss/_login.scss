@@ -13,8 +13,7 @@
 }
 
 .content-login {
-    width: 640px;
-    height: 600px;
+    width: 100%;
     background-color: #fff;
     margin: auto;
     border-radius: 10px;
@@ -28,7 +27,6 @@
 .login-body-item {
     height: 100px;
     width: 400px;
-    margin-left: 120px;
     display: flex;
 }
 
@@ -41,6 +39,7 @@
 
 .login-footer {
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .login-body-item-link {
@@ -49,7 +48,7 @@
     margin: auto;
     height: 50px;
     line-height: 50px;
-    width: 100%;
+    width: 80%;
     border: 2px solid #ccc;
     border-radius: 25px;
     font-weight: 500;

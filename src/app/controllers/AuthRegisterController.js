@@ -4,10 +4,10 @@ var session = require('express-session');
 class AuthRegisterController {
     // [GET] /register
     register(req, res) {
-        res.render('auth/register');
+        res.render('layouts/auth/register');
     }
     authUserRegister(req, res) {
-        res.render('auth/auth_register_username')
+        res.render('layouts/auth/auth_register_username')
     }
 }
 module.exports = new AuthRegisterController();

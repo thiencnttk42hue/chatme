@@ -4,11 +4,11 @@ var session = require('express-session');
 class AuthLoginController {
     // [GET] /login
     login(req, res) {
-            res.render('auth/login');
+            res.render('layouts/auth/login');
         }
         // [GET]/login/auth/user
     authUserLogin(req, res) {
-            res.render('auth/auth_login_username');
+            res.render('layouts/auth/auth_login_username');
         }
         //[POST]/login/auth/user
     handlingLogin(req, res) {
