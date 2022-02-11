@@ -23,12 +23,17 @@
     },
     "homepage": "https://github.com/thiencnttk42hue/chatme#readme",
     "dependencies": {
+        "bcryptjs": "^2.4.3",
         "body-parser": "^1.19.1",
+        "cookie-parser": "^1.4.6",
         "express": "^4.17.2",
         "express-handlebars": "^6.0.2",
         "express-session": "^1.17.2",
+        "jsonwebtoken": "^8.5.1",
+        "md5": "^2.3.0",
         "mongoose": "^6.1.8",
-        "mysql": "^2.18.1"
+        "mysql": "^2.18.1",
+        "passport": "^0.5.2"
     },
     "devDependencies": {
         "dart-sass": "^1.25.0",

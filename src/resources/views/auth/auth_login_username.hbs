@@ -12,6 +12,9 @@
                 </h2>
                 <div class="login-body">
                     <div class="login-form">
+                        {{#if message}}
+                            <h4 class="alert alert-danger">{{ message}}</h4>
+                        {{/if}}                        
                         <form action="/login/auth/user" method="post">
                         <div class="form-group">        
                             <input type="text" class=" login-form-input"  placeholder="Tên tài khoản" name="username">
