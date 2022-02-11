@@ -5,6 +5,7 @@ const express = require('express');
 const { engine } = require('express-handlebars');
 var session = require('express-session');
 var bodyParser = require('body-parser');
+const passport = require('passport');
 const db = require('./config/db');
 const app = express();
 const port = 3000;
@@ -19,9 +20,9 @@ app.use(session({
     secret: 'chatme',
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: true }
-}))
-
+    cookie: { maxAge: 60000 }
+}));
+// app.use(passport.session());
 // middleware
 app.use(
     express.urlencoded({
